@@ -91,16 +91,15 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername.bind(myUser);
-userName();
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
 // "iliketurtles"
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
-
-  //Answer Here
 // nothing yet, but is should be bound to myUser
+  //Answer Here
+
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
